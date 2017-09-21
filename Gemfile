@@ -6,6 +6,8 @@ gem 'rails', '4.2.5'
 
 gem 'devise'
 
+gem 'strong_parameters'
+
  group :production do
    gem 'pg'
    gem 'rails_12factor'
