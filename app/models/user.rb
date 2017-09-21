@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
+  
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :rememberable, :registerable,
-         :recoverable, :confirmable, :trackable, :validatable
+         :recoverable, :trackable, :validatable #:confirmable
   
   
 
@@ -18,5 +20,8 @@ class User < ActiveRecord::Base
 
   #def primary_email
   #email.primary || (email.first if new_record?)
-  #end         
+  #end  
+  
+  def create
+  end
 end
