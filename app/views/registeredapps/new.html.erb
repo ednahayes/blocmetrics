@@ -1,0 +1,17 @@
+<h1>Register New Application</h1>
+
+   <div class="col-md-8">
+     <%= form_for @registeredapp do |f| %>
+       <div class="form-group">
+         <%= f.label :name %>
+         <%= f.text_field :name, class: 'form-control', placeholder: "Enter application name" %>
+       </div>
+       <div class="form-group">
+         <%= f.label :url %>
+         <%= f.text_area :url, class: 'form-control', placeholder: "Enter url" %>
+       </div>
+        
+       </div>
+       <%= f.submit "Save", class: 'btn btn-success' %>
+     <% end %>
+   </div>
