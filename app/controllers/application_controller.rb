@@ -8,6 +8,14 @@ class ApplicationController < ActionController::Base
   
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+   def require_sign_in
+     unless current_user
+       flash[:alert] = "You must be logged in to do that"
+       redirect_to new_session_path
+     end
+   end 
+   
+   
     protected
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_in) do |user_params|

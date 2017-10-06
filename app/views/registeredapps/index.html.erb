@@ -1,29 +1,19 @@
-<div class ="container" ></div>
- <h1>All Registered Applications</h1>
-
- <div class="row">
+<h1>All Registered Applications</h1>
+<div class ="container" >
+  <div class="row">
    <div class="col-md-8">
-
      <% @registeredapps.each do |app| %>
        <div class="media">
          <div class="media-body">
            <h4 class="media-heading">
-
              <%= link_to app.name, app %>
            </h4>
-
          </div>
        </div>
-
-
-            <div class="col-md-4">
-
-            </div>
-   <% end %>
+       <% end %>
    </div>
-        <div class="media-body">
-
-             <%= link_to "Register a new application", new_registeredapp_path, class: 'btn btn-success' %>
-        </div>
+     <div class="media-body">
+       <%= link_to "Register a new application", new_registeredapp_path, class: 'btn btn-success' %>
+     </div>
  </div>
 </div>
