@@ -1,8 +1,9 @@
-<h1>All Registered Applications</h1>
+<div class ="container" ></div>
+ <h1>All Registered Applications</h1>
 
  <div class="row">
    <div class="col-md-8">
-    <% if current_user.registeredapps.any? %>
+
      <% @registeredapps.each do |app| %>
        <div class="media">
          <div class="media-body">
@@ -10,20 +11,19 @@
 
              <%= link_to app.name, app %>
            </h4>
-           <small>
-             <%= app.url %>
-           </small>
+
          </div>
        </div>
-       <% end %>
-       <% else %>
+
+
             <div class="col-md-4">
-              <p><strong><%= current_user.email %> You have not registered any applications</strong></p>
+
             </div>
-     <% end %>
+   <% end %>
    </div>
         <div class="media-body">
 
              <%= link_to "Register a new application", new_registeredapp_path, class: 'btn btn-success' %>
         </div>
  </div>
+</div>
