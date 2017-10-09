@@ -1,6 +1,7 @@
 class Registeredapp < ActiveRecord::Base
     before_create :owner
     belongs_to :user
+    has_many :events
   
     scope :visible_to, -> (owner) { owner ? all : "you don't have any registered apps" }
     
