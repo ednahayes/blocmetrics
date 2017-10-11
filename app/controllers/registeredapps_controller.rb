@@ -1,7 +1,7 @@
 class RegisteredappsController < ApplicationController
-   before_action :require_sign_in, except: [:show]  
-   # before_action :authorize_user
-    
+  before_action :require_sign_in, except: [:show]  
+   #before_action :authorize_user
+  before_action :authenticate_user!
     
     
   def index
@@ -69,8 +69,8 @@ class RegisteredappsController < ApplicationController
     end
   
     def authorize_user
-        @registeredapp = Registeredapp.find(params[:id])
-        unless current_user == Registeredapp.user  || current_user.role == 'admin' 
+        registeredapp = Registeredapp.find(registeredapp_params)
+        unless current_user == registeredapp.user  || current_user.role == 'admin' 
             flash[:alert] = "You must be an admin to do that."
             redirect_to registeredapp_path
         end

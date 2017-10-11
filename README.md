@@ -6,19 +6,36 @@
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
 
+##BLOCMETRICS
 
-Welcome to your Rails project on Cloud9 IDE!
+Blocmetrics is an analytic service that offers a few key features:
 
-To get started, just do the following:
+* A client-side JavaScript snippet that allows a user to track events on their website, 
+ by adding the following snippet to the user website:
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
+```ruby
+ var blocmetrics = {};
+   blocmetrics.report = function(eventName){
+   
+    var event = {event: { name: eventName }};
+ 
+   
+    var request = new XMLHttpRequest();
+  
+    request.open("POST", "https://blocmentrics-ednah.c9users.io/api/events", true);
+   
+    request.setRequestHeader('Content-Type', 'application/json');
+   
+    request.send(JSON.stringify(event));
+   };
+```
 
-Happy coding!
-The Cloud9 IDE team
+* A server-side API that captures and saves those events to a database.
 
+* A Rails application that displays the captured event data for a user.
 
-## Support & Documentation
+* A user can sign in and out of Blocmetrics providing an email and password.
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+* A user can register an application with Blocmetrics for tracking.
+
+* A user can view a graph of events for each registered application.
