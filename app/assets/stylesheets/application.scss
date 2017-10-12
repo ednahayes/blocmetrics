@@ -16,15 +16,33 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  
+html {
+ background-color: #e6ffff;
+}
+
+head {
+ background-color: #e6ffff;
+}
+body {
+  background-color: #e6ffff;
+}
+
  .user-info {
    padding: 8px;
+   background-color: #e6ffff;
  }
  
  .container {
-    height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #e6ffff;
+}
+
+.how-it-works {
+    
+    
 }
 
  .log-in {

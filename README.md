@@ -11,7 +11,7 @@
 Blocmetrics is an analytic service that offers a few key features:
 
 * A client-side JavaScript snippet that allows a user to track events on their website, 
- by adding the following snippet to the user website:
+ by adding the following snippet to the user website into your <pre> app/assets/javascripts/application.js <pre> file:
 
 ```ruby
  var blocmetrics = {};
@@ -29,6 +29,13 @@ Blocmetrics is an analytic service that offers a few key features:
     request.send(JSON.stringify(event));
    };
 ```
+then enter this event report in any view
+
+```ruby
+ <script type='text/javascript'>
+   blocmetrics.report('event name');
+ </script>
+```
 
 * A server-side API that captures and saves those events to a database.
 
@@ -39,3 +46,11 @@ Blocmetrics is an analytic service that offers a few key features:
 * A user can register an application with Blocmetrics for tracking.
 
 * A user can view a graph of events for each registered application.
+
+
+## We tested the APi by using curl:
+
+```ruby
+
+ $ curl -v -H "Accept: application/json" -H "Origin: http://registered_application.com" -H "Content-Type: application/json" -X POST -d '{"name":"click"}'  https://blocmentrics-ednah.c9users.io/api/events>
+ ```

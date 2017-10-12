@@ -1,0 +1,40 @@
+<div class="container-fluid how-it-works">
+    <h1 class="text-center">HOW IT WORKS</h1>
+    <p class="text-center" > Blocmetrics is an API tracking application, in which you could view the overall activity of your web page.</p>
+    <p class="text-center"> Just by following these simple steps, you will be on your way to track the traffic of your website.</p>
+
+  <div class="container">
+    <ol>
+        <li> Sign up to get a free account.</li>
+        <li> Register the name and URL of your website. </li>
+        <li> Copy the below code to your web application in your <code>app/assets/javascripts/application.js</code> file<br>
+        and change the <code>"MY EVENT NAME"</code> for your event name.</li>
+    </ol>
+    </div>
+   <div class="container">
+         <pre>
+            <code style="color:#000000; word-wrap:normal;">
+        
+  var blocmetrics = {};
+  
+  blocmetrics.report = function(eventName){
+   
+    var event = {event: { name: eventName }};
+ 
+    var request = new XMLHttpRequest();
+  
+    request.open("POST", "https://blocmentrics-ednah.c9users.io/api/events", true);
+   
+    request.setRequestHeader('Content-Type', 'application/json');
+   
+    request.send(JSON.stringify(event));
+        
+  };
+  
+  blocmetrics.report("MY EVENT NAME");
+           
+               </code>
+         </pre>
+       
+  </div>  
+</div>
