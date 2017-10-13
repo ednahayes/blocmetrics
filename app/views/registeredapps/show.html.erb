@@ -18,6 +18,13 @@
          </ul>
         <% end %>
 </div>
+
+<div class="container">
+   <%= pie_chart @registeredapp.events.group(:name).count %> 
+</div> 
+<div class="container">
+   <%= line_chart @registeredapp.events.group_by_day(:created_at).count %>
+</div>
 <div class="container">
     <%= link_to "Edit Registered Application", edit_registeredapp_path, class: 'btn btn-success' %>
     <%= link_to "Delete Registered Application", @registeredapp, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this application?' } %>

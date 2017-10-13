@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+ # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+ gem 'rails', '4.2.5'
 
-gem 'devise'
+ gem 'devise'
 
-#gem 'strong_parameters'
+ gem "chartkick"
+ 
+ gem 'groupdate'
+ #gem 'strong_parameters'
 
  group :production do
    gem 'pg'
@@ -14,7 +17,9 @@ gem 'devise'
  end
  
  group :development do
-   gem 'sqlite3'
+  #commented out sqlite3 added gem 'pg'
+   #gem 'sqlite3'
+   gem 'pg'
    gem 'web-console', '~> 2.0'
  end
  
