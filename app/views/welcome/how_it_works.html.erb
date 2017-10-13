@@ -4,12 +4,12 @@
     <p class="text-center"> Just by following these simple steps, you will be on your way to track the traffic of your website.</p>
 
   <div class="container">
-    <ol>
+    <ul>
         <li> Sign up to get a free account.</li>
         <li> Register the name and URL of your website. </li>
-        <li> Copy the below code to your web application in your <code>app/assets/javascripts/application.js</code> file<br>
-        and change the <code>"MY EVENT NAME"</code> for your event name.</li>
-    </ol>
+        <li> Copy the below code to your web application in your <code>app/assets/javascripts/application.js</code> file.</li>
+        
+    </ul>
     </div>
    <div class="container">
          <pre>
@@ -31,10 +31,20 @@
         
   };
   
-  blocmetrics.report("MY EVENT NAME");
-           
                </code>
          </pre>
-       
+  
+    </div> 
+    <div class="container">
+      <ul>
+        <li> Add the following to the page you want to track and change the <code>"MY EVENT NAME"</code> to your event name.</li>
+      </ul> 
+    </div>   
+    <div class="container">
+         <pre>
+            <code style="color:#000000; word-wrap:normal;">
+ blocmetrics.report("MY EVENT NAME");
+            </code>
+         </pre>              
   </div>  
 </div>
