@@ -15,35 +15,112 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import 'ionicons';
  
 html {
- background-color: #e6ffff;
+    background-color: #FCF0E2;
 }
 
 head {
- background-color: #e6ffff;
+    background-color: #FCF0E2;
 }
 body {
-  background-color: #e6ffff;
+    background-color: #FCF0E2;
 }
+
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(wall.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.link-to {
+    color: #AD9D8B;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.link-to-nav {
+    color: #50473C;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+
+.navbar-link {
+    color: #50473C;
+    font-weight: bold;
+}
+
+
+
+.titles{
+    color: #50473C;
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: grey 0.3em 0.3em 0.3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraph {
+   color: #50473C;
+   font-weight: bold;
+   font-size: 20px;
+   text-align: center;
+}
+
+.paragraph-2 {
+    color: #50473C;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
 
  .user-info {
    padding: 8px;
-   background-color: #e6ffff;
+   background-color: #FCF0E2;
+   color: #AD9D8B;
  }
  
  .container {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e6ffff;
+    background-color: #FCF0E2;
 }
 
-.how-it-works {
-    
-    
+.ion-clock {
+    justify-content: center;
+    align-items: center;
+    font-size: 160px;
+    text-align: center;
 }
+
+
+.pie-chart {
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+.ion-compass {
+    justify-content: center;
+    align-items: center;
+    font-size: 160px;
+    text-align: center;
+}
+
+
 
  .log-in {
     justify-content: center;
@@ -56,7 +133,7 @@ body {
  }
 
  .row {
-  padding: 15px;
+    padding: 15px;
  }
  
  .media-heading {

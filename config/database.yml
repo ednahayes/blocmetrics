@@ -26,23 +26,22 @@
 # database: db/production.sqlite3
  
 # Added below for PostgreSQL, Groupdate to work
-  default: &default
-    adapter: postgresql
-    encoding: SQL_ASCII
-    host: localhost
-    pool: 5
-    username: ENV['USERNAME']
-    password: ENV['PASSWORD']
-    timeout: 5000
+default: &default
+      adapter: postgresql
+      encoding: unicode
+      pool: 5
+      username: <%= ENV['USERNAME'] %>
+      password: <%= ENV['PASSWORD'] %>
+      host:     <%= ENV['IP'] %>
 
-  development:
-    <<: *default
-    database: app_development
+development:
+  <<: *default
+  database: app_development
 
-  test:
-    <<: *default
-    database: app_test
+test:
+  <<: *default
+  database: app_test
 
-  production:
-    <<: *default
+production:
+  <<: *default
   database: app_production

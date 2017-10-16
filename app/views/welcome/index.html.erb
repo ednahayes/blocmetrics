@@ -3,24 +3,27 @@
    <h1>Welcome to Blocmetrics</h1>
    <p>Your solution to tracking web application events, has now become easier and is now available at your fingertips!</p>
    <p>
-     <%= link_to "Sign In", new_user_session_path %> or
-     <%= link_to "Sign Up", new_user_registration_path %> today!
+     <%= link_to "Sign In", new_user_session_path, class:"link-to" %> or
+     <%= link_to "Sign Up", new_user_registration_path, class:"link-to" %> today!
     </p>
  </div>
 </div> 
 <div class="container"> 
  <div class="row">
    <div class="col-md-4">
-     <h2>View Activity</h2>
-     <p>Blocmetrics offers a few key features</p>
+     <h2 class="titles">Save precious time</h2>
+     <div class="text-center"><i class="ion-clock"></i></div>
+     <p class="paragraph">Manage and monitor all your applications' traffic with Blocmetrics.</p>
    </div>
    <div class="col-md-4">
-     <h2>Track Single Events</h2>
-     <p>Blocmetrics allows you to track events of your website, and it displays the captured event data.</p>
+     <h2 class="titles">Track Events</h2>
+     <div class="text-center"><%= image_tag "pie3chart.jpg", class:"pie-chart", :size => "360x200" %></div>
+     <p class="paragraph-2">Blocmetrics allows you to track events of your website, and it displays the captured event data.</p>
    </div>
    <div class="col-md-4">
-     <h2>An analytic service</h2>
-     <p>Blocmetrics will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+     <h2 class="titles">Easy Navigation</h2>
+     <div class="text-center"><i class="ion-compass"></i></div>
+     <p class="paragraph">The accesibility and easy to use navigation makes Blocmetrics a service, one of a kind.</p>
    </div>
  </div>
 </div> 

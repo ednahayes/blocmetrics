@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ gem 'ionicons-rails'
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '4.2.5'
 
@@ -12,14 +12,15 @@ source 'https://rubygems.org'
  #gem 'strong_parameters'
 
  group :production do
-   gem 'pg'
+   #commented pg out since already in development
+   #gem 'pg', '0.20.0'
    gem 'rails_12factor'
  end
  
  group :development do
   #commented out sqlite3 added gem 'pg'
    #gem 'sqlite3'
-   gem 'pg'
+   gem 'pg', '0.20.0'
    gem 'web-console', '~> 2.0'
  end
  
