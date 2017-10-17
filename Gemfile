@@ -15,8 +15,8 @@ source 'https://rubygems.org'
  end
  
  group :development do
-  #commented out sqlite3 added gem 'pg'
-   gem 'sqlite3'
+  #commented out sqlite3 added gem 'pg' moved sqlity to development test
+   #gem 'sqlite3'
    #gem 'pg', '0.20.0'
    gem 'web-console', '~> 2.0'
  end
@@ -39,6 +39,6 @@ source 'https://rubygems.org'
    gem 'factory_girl_rails'
    gem 'pry-rails'
    gem 'database_cleaner'
-   
+   gem 'sqlite3'
 end
 
