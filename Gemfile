@@ -13,14 +13,14 @@ source 'https://rubygems.org'
 
  group :production do
    #commented pg out since already in development
-   #gem 'pg', '0.20.0'
+   gem 'pg', '0.20.0'
    gem 'rails_12factor'
  end
  
  group :development do
   #commented out sqlite3 added gem 'pg'
-   #gem 'sqlite3'
-   gem 'pg', '0.20.0'
+   gem 'sqlite3'
+   #gem 'pg', '0.20.0'
    gem 'web-console', '~> 2.0'
  end
  
