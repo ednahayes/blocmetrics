@@ -3,14 +3,11 @@ source 'https://rubygems.org'
  gem 'ionicons-rails'
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '4.2.5'
-
  gem 'devise'
-
  gem "chartkick"
- 
  gem 'groupdate'
  #gem 'strong_parameters'
-
+ gem 'pg', '~> 0.20'
  group :production do
    #commented pg out since already in development
    gem 'pg', '~> 0.20'
