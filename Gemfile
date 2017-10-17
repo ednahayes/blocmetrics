@@ -13,7 +13,7 @@ source 'https://rubygems.org'
 
  group :production do
    #commented pg out since already in development
-   gem 'pg', '0.20.0'
+   gem 'pg', '~> 0.20'
    gem 'rails_12factor'
  end
  

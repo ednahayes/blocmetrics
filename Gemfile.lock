@@ -229,7 +229,7 @@ DEPENDENCIES
   groupdate
   ionicons-rails
   jquery-rails
-  pg (= 0.20.0)
+  pg (~> 0.20)
   pry-rails
   rails (= 4.2.5)
   rails-controller-testing
