@@ -7,7 +7,7 @@ source 'https://rubygems.org'
  gem "chartkick"
  gem 'groupdate'
  #gem 'strong_parameters'
- gem 'pg', '~> 0.20'
+ 
  group :production do
    #commented pg out since already in development
    gem 'pg', '~> 0.20'
