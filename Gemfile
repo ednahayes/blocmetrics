@@ -41,5 +41,7 @@ source 'https://rubygems.org'
    gem 'faker'
    gem 'factory_girl_rails'
    gem 'pry-rails'
+   gem 'database_cleaner'
+   
 end
 

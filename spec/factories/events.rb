@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :event do
-    name "MyString"
-    registeredapp nil
+    name "MyEvent"
+    registeredapp 
   end
 end
