@@ -29,7 +29,8 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  #changed to true in order for wall pic to show in heroku app
+  config.assets.compile = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -77,5 +78,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  config.action_mailer.default_url_options = { host: 'thawing-citadel-42062.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'ehayes-blocmetrics.herokuapp.com' }
 end
