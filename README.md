@@ -22,7 +22,7 @@ Blocmetrics is an analytic service that offers a few key features:
    
     var request = new XMLHttpRequest();
   
-    request.open("POST", "https://blocmentrics-ednah.c9users.io/api/events", true);
+    request.open("POST", "https://ehayes-blocmetrics.herokuapp.com/api/events", true);
    
     request.setRequestHeader('Content-Type', 'application/json');
    
@@ -48,9 +48,9 @@ then enter this event report in any view
 * A user can view a graph of events for each registered application.
 
 
-## We tested the APi by using curl:
+## We tested the API by using curl:
 
 ```ruby
 
- $ curl -v -H "Accept: application/json" -H "Origin: http://registered_application.com" -H "Content-Type: application/json" -X POST -d '{"name":"click"}'  https://blocmentrics-ednah.c9users.io/api/events>
+ $ curl -v -H "Accept: application/json" -H "Origin: http://registered_application.com" -H "Content-Type: application/json" -X POST -d '{"name":"click"}'  https://ehayes-blocmetrics.herokuapp.com/api/events>
  ```
