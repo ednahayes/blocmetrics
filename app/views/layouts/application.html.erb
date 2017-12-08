@@ -13,10 +13,12 @@
     <div class="container">
       <ul class="nav nav-tabs">
         <li><%= link_to "Blocmetrics", root_path, class:"link-to-nav" %></li>
-        <li><%= link_to "My Applications", registeredapps_path, class:"link-to-nav" %></li>
+        <% if user_signed_in? %>
+            <li><%= link_to "My Applications", registeredapps_path, class:"link-to-nav" %></li>
+        <% end %>
         <li><%= link_to "How It Works", how_it_works_path, class:"link-to-nav" %></li>
         <div class="pull-right user-info">        
-            <% if user_signed_in? %>
+            
               <div class="pull-right user-info">
                Signed in as: <strong><%= current_user.email %></strong> |
                <li class="pull-right"><%= image_tag current_user.avatar_url(48) %></li><br>

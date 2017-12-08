@@ -10,6 +10,7 @@ class RegisteredappsController < ApplicationController
   end
 
   def show
+    
     set_registeredapp
     #@registeredapp = Registeredapp.find(params[:id])
     @events = @registeredapp.events.group_by(&:name)
@@ -71,7 +72,7 @@ class RegisteredappsController < ApplicationController
     def authorize_user
         registeredapp = Registeredapp.find(registeredapp_params)
         unless current_user == registeredapp.user  || current_user.role == 'admin' 
-            flash[:alert] = "You must be an admin to do that."
+            flash[:alert] = "You must be an admin or registered user to do that."
             redirect_to registeredapp_path
         end
     end
