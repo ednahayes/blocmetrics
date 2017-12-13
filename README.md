@@ -1,17 +1,12 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## BLOCMETRICS
 
-##BLOCMETRICS
+![Blocmetrics HomePage](app/assets/images/blocmetricsHome.png)
 
-Blocmetrics is an analytic service that offers a few key features:
+## Blocmetrics is an analytic service that offers a few key features:
 
 * A client-side JavaScript snippet that allows a user to track events on their website, 
- by adding the following snippet to the user website into your <pre> app/assets/javascripts/application.js <pre> file:
+ by adding the following snippet to the user website into your "app/assets/javascripts/application.js" file:
 
 ```ruby
  var blocmetrics = {};
@@ -29,7 +24,7 @@ Blocmetrics is an analytic service that offers a few key features:
     request.send(JSON.stringify(event));
    };
 ```
-then enter this event report in any view
+## then enter this event report in any view
 
 ```ruby
  <script type='text/javascript'>
