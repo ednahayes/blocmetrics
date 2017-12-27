@@ -10,7 +10,6 @@ class Registeredapp < ActiveRecord::Base
     validates :user, presence: true 
     
     def owner
-        
         self.user_id = user.id
     end
 end

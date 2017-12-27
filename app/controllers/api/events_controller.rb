@@ -13,7 +13,6 @@
      headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
      headers['Access-Control-Allow-Headers'] = 'Content-Type'
      headers['Access-Control-Request-Method'] = '*'
-
     end
 
 
