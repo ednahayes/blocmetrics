@@ -1,6 +1,6 @@
  class API::EventsController < ApplicationController
     #added per CSRF doc: commented out in order to test the API using curl
-    #skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
 
     before_filter :set_access_control_headers
     
